@@ -6,8 +6,8 @@ const Vec3 = require("vec3")
 // ================= CONFIG =================
 
 const bot = mineflayer.createBot({
-  host: process.env.MC_HOST || "home9714.aternos.me",
-  port: parseInt(process.env.MC_PORT) || 25565,
+  host: process.env.MC_HOST || "Home9714.aternos.me",
+  port: parseInt(process.env.MC_PORT) || 11259,
   username: process.env.MC_USER || "bagad.billa.bot",
   version: "1.21.10"
 })
