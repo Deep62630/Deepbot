@@ -14,6 +14,13 @@ const bot = mineflayer.createBot({
 
 bot.loadPlugin(pathfinder)
 
+// 1. Initialize data only AFTER spawn
+  mcData = mcDataLoader(bot.version)
+  const movements = new Movements(bot, mcData)
+  bot.pathfinder.setMovements(movements)
+  
+  bot.chat("I am ready!")
+})
 
 // ================= MEMORY =================
 
