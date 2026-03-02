@@ -9,7 +9,7 @@ const bot = mineflayer.createBot({
   host: "home9714.aternos.me",
   port: 11259,
   username: "billabot",
-  version: false
+  version: "1.21.10"
 })
 
 bot.loadPlugin(pathfinder)
