@@ -1,0 +1,16 @@
+{
+  "name": "survival-ai-bot",
+  "version": "1.0.0",
+  "description": "Advanced Survival AI Bot",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mineflayer": "^4.16.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "minecraft-data": "^3.60.0",
+    "vec3": "^0.1.10"
+  }
+}
