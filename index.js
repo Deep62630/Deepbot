@@ -7,7 +7,7 @@ const Vec3 = require("vec3")
 
 const bot = mineflayer.createBot({
   host: "home9714.aternos.me",
-  port: 11259,
+  port: 48145,
   username: "billabot",
   version: false
 })
