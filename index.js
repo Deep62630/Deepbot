@@ -90,6 +90,48 @@ bot.on("chat", async (username, message) => {
     bot.chat("um i can't able sorry")
   }
 })
+// Move your mining modes INSIDE the chat listener
+bot.on("chat", async (username, message) => {
+  try {
+    // ... your existing !goto and !stop commands ...
+
+    if (message === "strip") {
+      mode = "strip";
+      bot.chat("Strip mining started");
+    } else if (message === "branch") {
+      mode = "branch";
+      bot.chat("Branch mining started");
+    } else if (message === "idle") {
+      mode = "idle";
+      bot.chat("Idle mode");
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+// IMPORTANT: Do NOT use physicTick for heavy tasks. 
+// Use a slower interval (every 1.5 seconds) to check status.
+setInterval(async () => {
+  if (!bot.entity) return; // Wait until spawned
+
+  try {
+    await autoArmor();
+    await autoEat();
+    
+    if (mode === "strip") await stripMine();
+    if (mode === "branch") await branchMine();
+    
+    // Only hunt/harvest if NOT mining
+    if (mode === "idle") {
+      await huntAnimals();
+      await harvestCrops();
+    }
+  } catch (e) {
+    // Silently handle minor interaction errors
+  }
+}, 1500); 
+
 // ================= AUTO EAT =================
 
 setInterval(async () => {
