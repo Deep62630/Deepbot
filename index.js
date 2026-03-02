@@ -5,12 +5,14 @@ const Vec3 = require("vec3")
 
 // ================= CONFIG =================
 
-const bot = mineflayer.createBot({
-  host: process.env.MC_HOST || "home9714.aternos.me",
-  port: parseInt(process.env.MC_PORT) || 11259,
-  username: process.env.MC_USER || "bagadbillabot",
-  version: "1.21.10"
-})
+setTimeout(() => {
+  const bot = mineflayer.createBot({
+    host: "home9714.aternos.me",
+    port: 11259,
+    username: "billabot",
+    version: false
+  })
+}, 8000)
 
 bot.loadPlugin(pathfinder)
 
