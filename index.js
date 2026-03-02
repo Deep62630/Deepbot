@@ -306,7 +306,6 @@ bot.on("death", () => {
 const mcData = require('minecraft-data')(bot.version)
 
 // ===== GLOBALS =====
-let mode = "idle"
 let lastRoam = 0
 
 // ===== AUTO ARMOR =====
