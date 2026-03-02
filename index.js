@@ -3,11 +3,6 @@ const { pathfinder, goals, Movements } = require("mineflayer-pathfinder")
 const mcDataLoader = require("minecraft-data")
 const Vec3 = require("vec3")
 
-const mineflayer = require("mineflayer")
-const { pathfinder, goals, Movements } = require("mineflayer-pathfinder")
-const mcDataLoader = require("minecraft-data")
-const Vec3 = require("vec3")
-
 // ================= CONFIG =================
 
 const bot = mineflayer.createBot({
