@@ -3,16 +3,19 @@ const { pathfinder, goals, Movements } = require("mineflayer-pathfinder")
 const mcDataLoader = require("minecraft-data")
 const Vec3 = require("vec3")
 
+const mineflayer = require("mineflayer")
+const { pathfinder, goals, Movements } = require("mineflayer-pathfinder")
+const mcDataLoader = require("minecraft-data")
+const Vec3 = require("vec3")
+
 // ================= CONFIG =================
 
-setTimeout(() => {
-  const bot = mineflayer.createBot({
-    host: "home9714.aternos.me",
-    port: 11259,
-    username: "billabot",
-    version: false
-  })
-}, 8000)
+const bot = mineflayer.createBot({
+  host: "home9714.aternos.me",
+  port: 11259,
+  username: "billabot",
+  version: false
+})
 
 bot.loadPlugin(pathfinder)
 
