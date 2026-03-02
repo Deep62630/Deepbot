@@ -7,9 +7,9 @@ const Vec3 = require("vec3")
 
 const bot = mineflayer.createBot({
   host: process.env.MC_HOST || "home9714.aternos.me",
-  port: parseInt(process.env.MC_PORT) || "11259",
-  username: process.env.MC_USER || "bagad.billa.bot",
-  version: false
+  port: parseInt(process.env.MC_PORT) || 11259,
+  username: process.env.MC_USER || "bagadbillabot",
+  version: "1.21.10"
 })
 
 bot.loadPlugin(pathfinder)
